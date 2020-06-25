@@ -1,0 +1,41 @@
+.chatter-wrapper {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #495057;
+
+    input {
+        font-size: 18px;
+        border: 1px solid #868e96;
+        background-color: #343a40;
+        color: #f8f9fa;
+        width: 80vw;
+        height: 50px;
+        outline: none;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    button {
+        margin-left: 3.333vw;
+        width: 10vw;
+        font-size: 18px;
+        font-weight: bold;
+        height: 50px;
+        color: #212529;
+        background-color: #adb5bd;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            background-color: #ced4da;
+        }
+        &:active {
+            background-color: #868e96;
+        }
+    }
+}
