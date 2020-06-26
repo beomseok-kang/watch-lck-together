@@ -83,8 +83,8 @@ function TemplatePage({ match }) {
         #함께 봐요&nbsp;&nbsp;&nbsp;#LCK&nbsp;&nbsp;&nbsp;#{teamname}
         <a href="https://toon.at/donate/beomseok-kang" className="donation-link">후원하기</a>
       </header>
-      <Youtube />
-      <Chatter />
+      <Youtube team={team}/>
+      <Chatter team={team}/>
     </>
   );
 }

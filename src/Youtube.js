@@ -5,7 +5,6 @@ import ChatHandler from './ChatHandler';
 import { useChatsState } from './ChatContext';
 import { useChatsDispatch } from './ChatContext';
 
-
 function useWindowDimensions() {
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   
@@ -21,7 +20,7 @@ function useWindowDimensions() {
     return windowDimensions;
 }
 
-function Youtube() {
+function Youtube({ team }) {
 
     const youtubeUrl = "https://www.youtube.com/embed/1C53AiH2L6A";
 
@@ -31,7 +30,7 @@ function Youtube() {
     const heightReal = height - 160;
 
     const dispatch = useChatsDispatch();
-   
+
     useEffect(() => {
         dispatch({
             type: 'CLEAR',

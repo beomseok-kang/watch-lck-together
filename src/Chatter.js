@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Chatter.scss';
 import { useChatsDispatch } from './ChatContext';
 
-function Chatter() {
+function Chatter({ team }) {
 
     const [value, setValue] = useState('');
     const dispatch = useChatsDispatch();

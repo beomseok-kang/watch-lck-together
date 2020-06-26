@@ -19,8 +19,9 @@ function ChatHandler ({ children, id, left, top }) {
         left
     } 
     
-    return showComponent? <div className="chat" style={style}>{children}</div>: null;
-
+    return showComponent
+        ? <div className="chat" style={style}>{children}</div>
+        : null;
 }
 
 export default ChatHandler;
