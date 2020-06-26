@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ChatHandler.scss'
 
 
-function ChatHandler ({ children, left, top }) {
+function ChatHandler ({ children, id, left, top }) {
+
+    const [showComponent, setShowComponent] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowComponent(false);
+        }, 8000);
+        return () => clearTimeout(timer);
+    }, []);
 
     const style = {
         position: 'absolute',
@@ -10,7 +19,7 @@ function ChatHandler ({ children, left, top }) {
         left
     } 
     
-    return <div className="chat" style={style}>{children}</div>;
+    return showComponent? <div className="chat" style={style}>{children}</div>: null;
 
 }
 

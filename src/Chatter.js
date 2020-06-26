@@ -13,7 +13,7 @@ function Chatter() {
         dispatch({
             type: 'CREATE',
             chat: value
-        })
+        });
         // THINGS TO DO AFTER SUBMIT
         setValue('');
     }

@@ -1,5 +1,26 @@
 .chat {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
-    color: rgba(255,255,255, 0.75);
+    animation-name: appear;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        display: block;
+        color: rgba(255,255,255, 1)
+    }
+    15% {
+        color: rgba(255,255,255, 0.8)
+    }
+    30% {
+        color: rgba(255,255,255, 0.6)
+    } 
+    85% {
+        color: rgba(255,255,255, 0.6);
+    }
+    100% {
+        color: rgba(255,255,255, 0);
+    }
 }

@@ -21,12 +21,13 @@ function chatsReducer (state, action) {
 
     switch (action.type) {
         case 'CREATE':
-            
             return state.concat({
                 text: action.chat,
                 left,
                 top,
             });
+        case 'CLEAR':
+            return [];
         default:
             throw new Error(`Unhandled Action Type: ${action.type}`);
     }

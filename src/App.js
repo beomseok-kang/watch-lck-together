@@ -90,6 +90,7 @@ function TemplatePage({ match }) {
 }
 
 function LobbyPage() {
+
   return (
     <>
       <div className="body__container">

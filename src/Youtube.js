@@ -3,6 +3,7 @@ import './Youtube.scss'
 import { getWindowDimensions } from './ChatContext'
 import ChatHandler from './ChatHandler';
 import { useChatsState } from './ChatContext';
+import { useChatsDispatch } from './ChatContext';
 
 
 function useWindowDimensions() {
@@ -22,10 +23,20 @@ function useWindowDimensions() {
 
 function Youtube() {
 
+    const youtubeUrl = "https://www.youtube.com/embed/1C53AiH2L6A";
+
     const state = useChatsState();
 
     const {height, width} = useWindowDimensions();
     const heightReal = height - 160;
+
+    const dispatch = useChatsDispatch();
+   
+    useEffect(() => {
+        dispatch({
+            type: 'CLEAR',
+        });
+    }, [dispatch]);
 
     const style = {
         width: width,
@@ -40,7 +51,7 @@ function Youtube() {
                 <iframe
                     title="Youtube"
                     width="1903" height="768"
-                    src="https://www.youtube.com/embed/dccezgS8jf0"
+                    src={`${youtubeUrl}?autoplay=1`}
                     frameBorder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture">
                 </iframe>
             </div>
