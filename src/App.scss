@@ -1,13 +1,118 @@
+$teams: (
+    t1,
+    drx,
+    kt,
+    dyn,
+    hle,
+    dwg,
+    gen,
+    af,
+    sp,
+    sb
+);
+
 body {
+    margin: 0;
+    padding: 0;
     background-color: black;
+    color: white;
+    a {
+        text-decoration: none;
+    }
 }
 header {
+    height: 80px;
+    background-color: #495057;
+    color: #DDDDDD;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 15px 20px;
+    box-sizing: border-box;
+
+    .donation-link {
+        position: fixed;
+        top: 0;
+        right: 0;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 140px;
+        text-decoration: none;
+        color: #DDDDDD;
+        font-size: 20px;
+    }
+}
+
+.body__container {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
-    background-color: #495057;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
+    color: #343a40;
+
+    .inner {
+        width: 512px;
+        background: #343a40;
+        border-radius: 5px;
+        color: #f8f9fa;
+        h2 {
+            font-size: 24px;
+            text-align: center;
+        }
+        .link--to-room {
+            font-weight: bold;
+            font-size: 20px;
+            width: 100%;
+            color: #495057;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background: #ced4da;
+            margin: 20px 0;
+        }
+        h3 {
+            font-size: 18px;
+            text-align: center;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+                border-radius: 8px;
+                background: #ced4da;
+                color: #343a40;
+                height: 50px;
+                li {
+                    height: 40px;
+                    display: flex;
+                    font-size: 18px;
+                    font-weight: bold;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    text-indent: 100px;
+    
+                    @each $team in $teams {
+                        &##{$team} {
+                            background: url("img/#{$team}.png");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: left center;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
