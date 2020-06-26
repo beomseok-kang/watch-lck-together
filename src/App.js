@@ -6,7 +6,6 @@ import ChatProvider from './ChatContext';
 import { Route, Link, Switch } from 'react-router-dom';
 import { MdArrowBack } from "react-icons/md";
 
-
 function App() {
   return (
     <>
