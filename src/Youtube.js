@@ -22,7 +22,7 @@ function useWindowDimensions() {
 
 function Youtube({ team }) {
 
-    const youtubeUrl = "https://www.youtube.com/embed/1C53AiH2L6A";
+    const youtubeUrl = "https://www.youtube.com/embed/dccezgS8jf0";
 
     const state = useChatsState();
 
