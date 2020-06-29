@@ -5,8 +5,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
-const basename="/watch-lck-together";
-
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <React.StrictMode>

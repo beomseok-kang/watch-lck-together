@@ -14,10 +14,7 @@ function App() {
           <Route path="/lobby" component={LobbyPage}/>
           <Route path="/room/:team" component={TemplatePage}/>
           <Route render={({ location }) =>
-            <div>
-              <h2>이 페이지는 존재하지 않습니다.</h2>
-              <p>{location.pathname}</p>
-            </div>
+            <DoesntExistPage />
           }/>   
         </Switch>  
       </ChatProvider>
@@ -65,13 +62,11 @@ const roomData = {
 function TemplatePage({ match }) {
 
   const { team } = match.params;
-  const { teamname } = roomData[team];
+  const { teamname } = roomData[team] || { teamname: null } ;
 
   if(!teamname) {
     return (
-      <div>
-        <h2>이 페이지는 존재하지 않습니다.</h2>
-      </div>
+        <DoesntExistPage />
       );
   }
 
@@ -95,7 +90,7 @@ function LobbyPage() {
       <div className="body__container">
         <div className="inner">
           <h2>입장하실 방을 선택해 주세요.</h2>
-          <Link to="/room/all"><div className="link--to-room"><div></div>모두</div></Link>
+          <Link to="/room/all"><div className="link--to-room">모두</div></Link>
           <h3>팀 방</h3>
           <ul>
             <Link to="/room/t1"><li id="t1">T1</li></Link>
@@ -112,6 +107,19 @@ function LobbyPage() {
         </div>
       </div>
     </>
+  );
+}
+
+function DoesntExistPage() {
+  return (
+    <div className="body__container">
+      <div className="inner">
+        <h2>이 페이지는 존재하지 않습니다.</h2>
+        <Link to="/lobby">
+          <div className="link--to-room">홈으로</div>
+        </Link>
+      </div>
+    </div>
   );
 }
 
