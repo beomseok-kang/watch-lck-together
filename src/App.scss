@@ -28,6 +28,7 @@ header {
     font-weight: bold;
     padding: 15px 20px;
     box-sizing: border-box;
+    text-shadow: 0 0.5px 3px rgba(255,255,255, 0.5);
 
     .donation-link {
         position: fixed;
@@ -54,10 +55,12 @@ header {
     color: #343a40;
 
     .inner {
+        box-shadow: 0px 0px 50px rgba(160,160,160,1);
         width: 512px;
         background: #343a40;
-        border-radius: 5px;
+        border-radius: 20px;
         color: #f8f9fa;
+        padding-bottom: 10px;
         h2 {
             font-size: 24px;
             text-align: center;
@@ -65,14 +68,21 @@ header {
         .link--to-room {
             font-weight: bold;
             font-size: 20px;
-            width: 100%;
+            width: 492px;
+            border-radius: 8px;
             color: #495057;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 50px;
             background: #ced4da;
-            margin: 20px 0;
+            margin: 20px auto;
+            box-shadow: 0 4px 0.5px rgba(150,150,150,1);
+            text-shadow: 0 0.5px 2px grey;
+
+            &:hover {
+                background: #dee2e6;
+            }
         }
         h3 {
             font-size: 18px;
@@ -93,6 +103,12 @@ header {
                 background: #ced4da;
                 color: #343a40;
                 height: 50px;
+                box-shadow: 0 4px 0.5px rgba(150,150,150,1);
+
+                &:hover {
+                    background: #dee2e6;
+                }
+
                 li {
                     height: 40px;
                     display: flex;
@@ -102,6 +118,7 @@ header {
                     justify-content: center;
                     position: relative;
                     text-indent: 100px;
+                    text-shadow: 0 0.5px 2px grey;
     
                     @each $team in $teams {
                         &##{$team} {
