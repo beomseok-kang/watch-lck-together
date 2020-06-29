@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a5d8412f2ca97877d6d6029dc1f7e88b",
+    "revision": "1fa9cd05c7a579468bc4ee014fbbb5a9",
     "url": "/watch-lck-together/index.html"
   },
   {
-    "revision": "2bc1bc375a450b7725f8",
+    "revision": "00f4e9b01622b8cc2051",
     "url": "/watch-lck-together/static/css/main.0596435d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/watch-lck-together/static/js/2.c0e6a50c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2bc1bc375a450b7725f8",
-    "url": "/watch-lck-together/static/js/main.44e29c78.chunk.js"
+    "revision": "00f4e9b01622b8cc2051",
+    "url": "/watch-lck-together/static/js/main.298e196f.chunk.js"
   },
   {
     "revision": "d2e335df6a38698f5a83",
