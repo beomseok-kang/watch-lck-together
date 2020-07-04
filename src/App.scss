@@ -53,6 +53,9 @@ header {
     align-items: center;
     justify-content: center;
     color: #343a40;
+    background: url('./img/LCK-Logo-White.png');
+    background-size: 900px;
+    background-repeat: no-repeat;
 
     .inner {
         box-shadow: 0px 0px 50px rgba(160,160,160,1);
@@ -61,6 +64,7 @@ header {
         border-radius: 20px;
         color: #f8f9fa;
         padding-bottom: 10px;
+        
         h2 {
             font-size: 24px;
             text-align: center;
@@ -89,16 +93,17 @@ header {
             text-align: center;
         }
         ul {
-            margin: 0;
+            margin: 0 10px;
             padding: 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 15px;
             
             a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 10px;
+                margin: 10px 0;
                 border-radius: 8px;
                 background: #ced4da;
                 color: #343a40;
