@@ -1,6 +1,6 @@
 # Watch LCK Together
 
-You can the live website on:
+### You can the live website on:
 https://beomseok-kang.github.io/watch-lck-together/lobby
 -----------------------------------------------------------------
 ### Ver 0.0.3
